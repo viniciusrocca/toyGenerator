@@ -12,3 +12,13 @@ The following image represents the structure of the simplified Monte Carlo simul
   * The squares represents the detectors.
 
 ![Image of Yaktocat](https://github.com/viniciusrocca/toyGenerator/blob/master/generatorStructure.jpg)
+
+
+The generator is divided in four blocks:
+
+  * Initial state block: Sampling of the partons energys according to a PDF.
+  * Collision block: Simulate the collision of the partons generating X (Higgs) and Y (parton).
+  * Decay block: Simulate the decay of X (Higgs) in A and B (two photons).
+  * Detector block: Simulate the smearing effect caused by the detector.
+
+
