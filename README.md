@@ -24,24 +24,21 @@ The generator is divided in four blocks:
 ## Running
 
 A basic example to run this generator is:
-
-'./pyhton3 EventGenerator.py -n 1000'
-
+'''
+./pyhton3 EventGenerator.py -n 1000
+'''
 To run 1000 events of Higgs boson generation as a singal and his decay in two photons.
 
 
 ## Possible inputs
 
- * Number of events '-n <int>'.
- * Proton energy at the center of mass in TeV '-e <float>'.
- * Mass of particle X in GeV '-x <float>'
- * Mass of particle Y in MeV '-y <float>'
- * Mass of parton 1 in MeV '-p <float>'
- * Mass of parto 2 in Mev '-q <float>'
- * Mass of particle A in GeV '-a <float>'
- * Mass of particle B in GeV '-b <float>'
+ * Number of events '''-n <int>'''.
+ * Proton energy at the center of mass in TeV '''-e <float>'''.
+ * Mass of particle X in GeV '''-x <float>'''
+ * Mass of particle Y in MeV '''-y <float>'''
+ * Mass of parton 1 in MeV '''-p <float>'''
+ * Mass of parto 2 in Mev '''-q <float>'''
+ * Mass of particle A in GeV '''-a <float>'''
+ * Mass of particle B in GeV '''-b <float>'''
 
- * Mass of parton 1 in MeV '-p <float>'
- * Mass of parton 2 in MeV '-q <float>'
- * Mass of particle A in GeV '-a <float>'
- * Mass of particle B in GeV '-b <float>'
+
