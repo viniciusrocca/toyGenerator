@@ -299,7 +299,7 @@ def check_E(p1,p2,mX,mY):
 	
 	
 	
-def main():
+def main(n,eP,mX,mY,m1,m2,mA,mB):
 	
 
 
@@ -330,30 +330,30 @@ def main():
 	
 	#Dados de entrada
 
-	eP = 6.5 * TeV #Energia dos protons. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	eP = eP * TeV #Energia dos protons. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	eP = eP.asNumber(GeV)
 
-	m1 = 2.4 * MeV #Massa do parton 1. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	m1 = m1 * MeV #Massa do parton 1. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	m1 = m1.asNumber(GeV)
 
-	m2 = 2.4 * MeV #Massa do parton 2. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	m2 = m2 * MeV #Massa do parton 2. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	m2 = m2.asNumber(GeV)
 
 
-	mX = 125.5 * GeV #Massa da particula X. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mX = mX * GeV #Massa da particula X. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mX = mX.asNumber(GeV)
 
-	mY= 2.4 * MeV #Massa da particula Y. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mY= mY * MeV #Massa da particula Y. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mY= mY.asNumber(GeV)
 
-	mA = 0 * kg #Massa da particula A. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mA = mA * kg #Massa da particula A. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mA = mA.asNumber(GeV)
 
-	mB = 0 *kg #Massa da particula B. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mB = mB * kg #Massa da particula B. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mB = mB.asNumber(GeV)
 
 
-	n = int(input()) #Numero de eventos a serem gerados.
+	n = n #Numero de eventos a serem gerados.
 	
 	#Criando o arquivo onde os dados serao gravados
 	f = open('QuadrimomentosAeB.csv', 'w')
@@ -391,4 +391,31 @@ def main():
 		
 		
 		
-main()
+if __name__ == "__main__":
+    
+    import argparse    
+    ap = argparse.ArgumentParser( description=
+            "Run the event generator." )
+    ap.add_argument('-n','--nevents',default=1000, type = int,
+				   help ='Number of events tha you desire to generate')
+    ap.add_argument('-e', '--eP', default=6.5,type = float,
+            help='half of center of mass energy in TeV')
+    ap.add_argument('-x', '--mX', default=125.5, type = float,
+            help='Mass of particle X in GeV')
+    ap.add_argument('-p', '--m1', default=2.4, type = float,
+            help='Mass of parton 1 in MeV')
+    ap.add_argument('-q', '--m2', default=2.4, type = float,
+            help='Mass of parton 2 in MeV')
+    ap.add_argument('-y', '--mY', default=2.4, type = float,
+            help='Mass of particle Y in MeV')
+    ap.add_argument('-a', '--mA', default=0.0, type = float,
+            help='Mass of particle A in GeV')
+    ap.add_argument('-b', '--mB', default=0.0, type = float,
+            help='Mass of particle B in GeV')
+    
+
+
+    
+
+    args = ap.parse_args()
+main(args.nevents,args.eP,args.mX,args.mY,args.m1,args.m2,args.mA,args.mB)
