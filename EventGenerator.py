@@ -346,10 +346,10 @@ def main(n,eP,mX,mY,m1,m2,mA,mB):
 	mY= mY * MeV #Massa da particula Y. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mY= mY.asNumber(GeV)
 
-	mA = mA * kg #Massa da particula A. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mA = mA * GeV #Massa da particula A. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mA = mA.asNumber(GeV)
 
-	mB = mB * kg #Massa da particula B. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mB = mB * GeV #Massa da particula B. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mB = mB.asNumber(GeV)
 
 
