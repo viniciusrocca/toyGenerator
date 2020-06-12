@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 import random
 import numpy as np
 import csv
@@ -397,7 +400,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser( description=
             "Run the event generator." )
     ap.add_argument('-n','--nevents',default=1000, type = int,
-				   help ='Number of events tha you desire to generate')
+				   help ='Number of events to be generated')
     ap.add_argument('-e', '--eP', default=6.5,type = float,
             help='half of center of mass energy in TeV')
     ap.add_argument('-x', '--mX', default=125.5, type = float,
