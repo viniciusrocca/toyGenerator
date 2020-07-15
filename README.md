@@ -39,7 +39,7 @@ To run 1000 events of Higgs boson generation as a singal and his decay in two ph
  * Mass of particle X in GeV ```-x <x_mass>```
  * Mass of particle Y in MeV ```-y <y_mass>```
  * Mass of parton 1 in MeV ```-p <parton1_mass>```
- * Mass of parto 2 in Mev ```-q <parton2_mass>```
+ * Mass of parton 2 in Mev ```-q <parton2_mass>```
  * Mass of particle A in GeV ```-a <a_mass>```
  * Mass of particle B in GeV ```-b <b_mass>```
 
