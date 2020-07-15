@@ -26,7 +26,7 @@ The generator is divided in four blocks:
 A basic example to run this generator is:
 
 ```
-./pyhton3 EventGenerator.py -n 1000
+./EventGenerator.py -n 1000
 ```
 
 To run 1000 events of Higgs boson generation as a singal and his decay in two photons.
