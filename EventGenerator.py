@@ -359,7 +359,7 @@ def main(n,eP,mX,mY,m1,m2,mA,mB):
 	n = n #Numero de eventos a serem gerados.
 	
 	#Criando o arquivo onde os dados serao gravados
-	f = open('QuadrimomentosAeB.csv', 'w')
+	f = open('Quadrimomentos.csv', 'w')
 	writer = csv.writer(f)
 	writer.writerow( ('p0A','p1A','p2A','p3A','p0B','p1B','p2B','p3B','p0X','p1X','p2X','p3X','p0Y','p1Y','p2Y','p3Y','p01','p11','p21','p31','p02','p12','p22','p32') )
 	f.close()
@@ -387,7 +387,7 @@ def main(n,eP,mX,mY,m1,m2,mA,mB):
 		pB_Lab = detector(pB_Lab)
 
 	#Escrevendo no arquivo csv    
-		f = open('QuadrimomentosAeB.csv', 'a')
+		f = open('Quadrimomentos.csv', 'a')
 		writer = csv.writer(f)
 		writer.writerow( (pA_Lab[0],pA_Lab[1],pA_Lab[2],pA_Lab[3],pB_Lab[0],pB_Lab[1],pB_Lab[2],pB_Lab[3],pX[0],pX[1],pX[2],pX[3],pY[0],pY[1],pY[2],pY[3],p1[0],p1[1],p1[2],p1[3],p2[0],p2[1],p2[2],p2[3]) )
 		f.close()
