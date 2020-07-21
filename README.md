@@ -43,7 +43,7 @@ To run 1000 events of Higgs boson generation as a singal and his decay in two ph
  * Mass of particle A in GeV ```-a <a_mass>```
  * Mass of particle B in GeV ```-b <b_mass>```
 
-## Output
+## Output (Quadrimomentos.csv)
 
 In the output, the first row is the name of the content of each column. This name is composed by three characters, the second is the component of the four momentum (e, x, y, z) and the third is the name of the particle. An example of output is:
 
