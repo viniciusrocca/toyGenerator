@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 import random
 import numpy as np
 import csv
@@ -346,10 +349,10 @@ def main(n,eP,mX,mY,m1,m2,mA,mB):
 	mY= mY * MeV #Massa da particula Y. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mY= mY.asNumber(GeV)
 
-	mA = mA * kg #Massa da particula A. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mA = mA * GeV #Massa da particula A. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mA = mA.asNumber(GeV)
 
-	mB = mB * kg #Massa da particula B. (kg, g, eV, keV, MeV, GeV,TeV, J)
+	mB = mB * GeV #Massa da particula B. (kg, g, eV, keV, MeV, GeV,TeV, J)
 	mB = mB.asNumber(GeV)
 
 
@@ -358,7 +361,7 @@ def main(n,eP,mX,mY,m1,m2,mA,mB):
 	#Criando o arquivo onde os dados serao gravados
 	f = open('Quadrimomentos.csv', 'w')
 	writer = csv.writer(f)
-	writer.writerow( ('peA','pxA','pyA','pzA','peB','pxB','pyB','pzB','peX','pxX','pyX','pzX','peY','pxY','pyY','pzY','pe1','px1','py1','pz1','pe2','px2','py2','pz2') )
+	writer.writerow( ('p0A','p1A','p2A','p3A','p0B','p1B','p2B','p3B','p0X','p1X','p2X','p3X','p0Y','p1Y','p2Y','p3Y','p01','p11','p21','p31','p02','p12','p22','p32') )
 	f.close()
 	
 	#Gerando os eventos
@@ -397,21 +400,21 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser( description=
             "Run the event generator." )
     ap.add_argument('-n','--nevents',default=1000, type = int,
-				   help ='Number of events that you desire to generate. Default = 1000.')
+				   help ='Number of events to be generated')
     ap.add_argument('-e', '--eP', default=6.5,type = float,
-            help='half of center of mass energy in TeV. Default = 6.5.')
+            help='half of center of mass energy in TeV')
     ap.add_argument('-x', '--mX', default=125.5, type = float,
-            help='Mass of particle X in GeV. Default = 125.5.')
+            help='Mass of particle X in GeV')
     ap.add_argument('-p', '--m1', default=2.4, type = float,
-            help='Mass of parton 1 in MeV. Default = 2.4.')
+            help='Mass of parton 1 in MeV')
     ap.add_argument('-q', '--m2', default=2.4, type = float,
-            help='Mass of parton 2 in MeV. Default = 2.4.')
+            help='Mass of parton 2 in MeV')
     ap.add_argument('-y', '--mY', default=2.4, type = float,
-            help='Mass of particle Y in MeV. Default = 2.4.')
+            help='Mass of particle Y in MeV')
     ap.add_argument('-a', '--mA', default=0.0, type = float,
-            help='Mass of particle A in GeV. Default = 0.')
+            help='Mass of particle A in GeV')
     ap.add_argument('-b', '--mB', default=0.0, type = float,
-            help='Mass of particle B in GeV. Default = 0.')
+            help='Mass of particle B in GeV')
     
 
 
